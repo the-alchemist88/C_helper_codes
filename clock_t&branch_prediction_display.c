@@ -65,11 +65,11 @@ int main()
 	int ival = 0;
 	size_t i;
 
-	// enable sorted array test
-#ifdef QSORT
+	
+#ifdef QSORT // enable sorted array test
 	qsort(ptr, SIZE, sizeof(*ptr), fcmp);
 	puts("Array is sorted, press enter to start the search\n");
-#elif defined WCASE
+#elif defined WCASE // enable worst case scenerio test
 	set_array_zero(ptr, SIZE); 
 	ptr[SIZE - 1] = 32767; 
 	puts("Array is not sorted, press enter to start the search\n");
